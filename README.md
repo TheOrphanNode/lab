@@ -1,60 +1,68 @@
-# 🧪 Dev Lab (Deneysel Çalışma Alanı)
+# 🧪 Dev Lab (Experimental Workspace)
 
-Bu depo, farklı teknolojiler ve dillerle deneysel çalışmalar, konsept denemeleri (PoC) ve test projeleri gerçekleştirmek üzere oluşturulmuş çoklu teknoloji (polyglot) laboratuvarıdır.
+This repository is a polyglot laboratory designed for experiments, proof-of-concept (PoC) explorations, and testbeds across different programming languages and technologies.
 
 ---
 
-## 📁 Proje Yapısı
+## 📁 Repository Structure
 
 ```text
 lab/
-├── .gitignore          # Tüm teknolojileri kapsayan ana git yoksayma dosyası
-├── README.md           # Ana laboratuvar dokümantasyonu
+├── .gitignore          # Global gitignore covering all supported technologies
+├── README.md           # Main laboratory documentation
 │
-├── react-lab/          # Saf React (Vite) deneysel projesi
+├── react-lab/          # Pure React 18 (Vite) experimental workspace
 │   ├── .gitignore
 │   ├── README.md
 │   ├── package.json
 │   ├── vite.config.js
 │   └── src/
+│       ├── table-row-dialog/  # Table row triggered dialog form (Stack Overflow #80000947)
+│       ├── App.jsx
+│       └── ...
 │
-├── spring-lab/         # Saf Java Spring Boot (Maven) deneysel projesi
+├── spring-lab/         # Pure Java Spring Boot 3 (Maven) experimental workspace
 │   ├── .gitignore
 │   ├── README.md
 │   ├── pom.xml
 │   └── src/
 │
-├── rust-lab/           # (Gelecekte eklenecek Rust denemeleri)
-└── go-lab/             # (Gelecekte eklenecek Go denemeleri)
+├── rust-lab/           # (Reserved for future Rust experiments)
+└── go-lab/             # (Reserved for future Go experiments)
 ```
 
 ---
 
-## 🚀 Hızlı Başlangıç
+## 🚀 Quick Start
 
 ### 1. React Lab (`react-lab`)
-Saf, hafif ve modern Vite tabanlı React ortamı.
+A lightweight and modern Vite-based React environment.
 
 ```bash
 cd react-lab
 npm install
 npm run dev
 ```
-Uygulama varsayılan olarak `http://localhost:5173` adresinde çalışır.
+The application runs by default at `http://localhost:5173`.
+
+#### Included Experiments & Prototypes:
+- **Table Row Dialog Form (`src/table-row-dialog/`)**: A solution demonstrating how to trigger an accessible modal form pre-populated with a table row's data upon click without losing background table state or navigating away.
+
+---
 
 ### 2. Spring Lab (`spring-lab`)
-Temiz Java 17/21 ve Spring Boot 3 tabanlı REST API altyapısı.
+A clean Java 17/21 and Spring Boot 3 REST API infrastructure.
 
 ```bash
 cd spring-lab
 mvn spring-boot:run
 ```
-Uygulama varsayılan olarak `http://localhost:8080` adresinde çalışır.
-- Test endpoint: `GET http://localhost:8080/api/hello`
+The application runs by default at `http://localhost:8080`.
+- Health check endpoint: `GET http://localhost:8080/api/hello`
 
 ---
 
-## 🛠️ Gelecekte Yeni Lab Eklerken
-- **Rust için:** `cargo new rust-lab`
-- **Go için:** `mkdir go-lab && cd go-lab && go mod init lab/go-lab`
-- Ana `.gitignore` dosyası Rust ve Go için hazır durumdadır.
+## 🛠️ Adding New Labs in the Future
+- **For Rust:** `cargo new rust-lab`
+- **For Go:** `mkdir go-lab && cd go-lab && go mod init lab/go-lab`
+- The root `.gitignore` is already pre-configured for Rust and Go.

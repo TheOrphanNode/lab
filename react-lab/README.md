@@ -1,28 +1,34 @@
 # ⚛️ React Lab
 
-Bu dizin, React ile hızlı denemeler, bileşen prototipleri ve frontend testleri yapabileceğin saf (pure) bir Vite + React ortamıdır.
+This directory is a pure Vite + React environment for rapid experiments, component prototyping, and frontend exploration.
 
 ---
 
-## 🛠️ Kurulum ve Çalıştırma
+## 🛠️ Setup & Running
 
-Bağımlılıkları yükleyin:
+Install dependencies:
 ```bash
 npm install
 ```
 
-Geliştirme sunucusunu başlatın:
+Start the development server:
 ```bash
 npm run dev
 ```
 
-Tarayıcınızda açın:
+Open in your browser:
 `http://localhost:5173`
 
 ---
 
-## 📦 Komutlar
+## 📦 Scripts
 
-- `npm run dev`: Vite dev sunucusunu Hot Module Replacement (HMR) ile başlatır.
-- `npm run build`: Projeyi üretim için `dist/` klasörüne derler.
-- `npm run preview`: Üretim çıktısını yerel olarak önizler.
+- `npm run dev`: Starts the Vite development server with Hot Module Replacement (HMR).
+- `npm run build`: Bundles the project for production into the `dist/` directory.
+- `npm run preview`: Previews the production build locally.
+
+---
+
+## 🧪 Experiments & Features
+
+- **[table-row-dialog/](src/table-row-dialog/)**: Demonstrates triggering a modal dialog form pre-populated with row details upon clicking a table row, preventing event bubbling on action buttons (`stopPropagation`), and managing modal state at the table level without page routing.
