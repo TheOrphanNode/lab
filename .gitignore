@@ -1,0 +1,71 @@
+# ==========================================
+# Experimental Lab - Global .gitignore
+# Covers: React/Node, Java/Spring, Rust, Go, IDEs, OS
+# ==========================================
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE & Editor Settings
+.idea/
+*.iml
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+
+# Environment and Secrets
+.env
+.env*.local
+*.pem
+*.key
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Node / React
+node_modules/
+dist/
+dist-ssr/
+build/
+.vite/
+.next/
+out/
+
+# Java / Spring / Maven / Gradle
+target/
+*.class
+*.jar
+*.war
+*.ear
+.gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Rust / Cargo
+debug/
+[Tt]arget/
+**/*.rs.bk
+*.bk
+
+# Go
+bin/
+pkg/
+vendor/
+*.exe
+*.test
+*.out
