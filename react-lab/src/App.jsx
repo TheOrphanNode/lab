@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import './App.css';
 import { TableRowDialogDemo } from './table-row-dialog/TableRowDialogDemo';
+import { ClearableSelectDemo } from './clearable-select/ClearableSelectDemo';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('table-dialog');
+  const [activeTab, setActiveTab] = useState('clearable-select');
   const [count, setCount] = useState(0);
 
   return (
@@ -15,6 +16,13 @@ function App() {
           <strong>React Lab</strong>
         </div>
         <div className="app-nav-tabs">
+          <button
+            type="button"
+            className={`tab-btn ${activeTab === 'clearable-select' ? 'active' : ''}`}
+            onClick={() => setActiveTab('clearable-select')}
+          >
+            🗑️ Shadcn Clearable Select
+          </button>
           <button
             type="button"
             className={`tab-btn ${activeTab === 'table-dialog' ? 'active' : ''}`}
@@ -34,6 +42,7 @@ function App() {
 
       {/* Active Tab View */}
       <main className="app-main">
+        {activeTab === 'clearable-select' && <ClearableSelectDemo />}
         {activeTab === 'table-dialog' && <TableRowDialogDemo />}
 
         {activeTab === 'starter' && (
